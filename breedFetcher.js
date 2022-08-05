@@ -24,6 +24,9 @@ const fetchBreed = function(breed, callback) {
   });
 };
 fetchBreed(myArgs, (error, data) => {
-  //console.log(error);
-  console.log(data);
+  if (error) {
+    console.log('Error fetch details:', error);
+  } else {
+    console.log(data);
+  }
 });
